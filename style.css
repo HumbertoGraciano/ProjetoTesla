@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0; /* espaçamento externo */
+    padding: 0; /* espaçamento interno */
+    box-sizing: border-box; 
+}
+/* * asterísco significa TUDO, ele vai aplicar esse estilo para tudo */
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+video, .img-tesla {
+     width: 100%; /* LARGURA */
+     height: 100%; /* ALTURA */
+     position: absolute; /* POSICIONAR O ITEM NUMA POSIÇÃO EXATA QUE EU DESEJAR */
+     top: 0;
+     left: 0;
+     z-index: -1; /* DEFINE QUEM FICA NA FRENTE DE QUEM */
+     object-fit: cover;/* FAZ COM QUE O VIDEO CUBRA TODA A TELA  */
+     filter: brightness(60%);
+}
+ 
+.logo {
+    filter: brightness(100);
+    position: fixed;
+    width: 120px;
+}
+
+.item {
+    display: flex; /* HABILITA ALGUMAS PROPRIEDADES CSS */
+
+    justify-content: space-between; /* CRIA UM ESPAÇAMENTO ENTRE OS ITENS */
+    flex-direction: column; /* DEIXAR UM ITEM DEBAIXO DO OUTRO */
+
+    position: relative;
+    height: 100vh; /* TELA TODA - ALTURA */
+    width: 100vw; /* TELA TODA - LARGURA */
+    scroll-snap-align: start;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.modelo-carro{
+    color: white;
+    font-size: 50px;
+}
+
+.sub-titulo {
+    color: white;
+}
+
+.info-carro {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.rodape {
+    text-align: center; /* ALINHA MEU ITEM AO CENTRO */
+}
+
+button {
+    background-color: rgba(34, 34, 34, 0.8);
+    color: white;
+    padding: 7px 80px;
+    border-radius: 5px; /* ARREDONDA A BORDA DO BOTÃO */
+    border: none; /* TIRA A BORDA DO BOTÃO */
+    cursor: pointer; /* COLOCA A MÃOSINHA NO LUGAR DO MOUSE */
+}
+
+.test-drive {
+    color: black;
+    background-color: white;
+}
+
+.texto-rodape {
+    color: white;
+    font-size: 12px; /* TAMANHO DO TEXTO */
+    margin-top: 10px;
+}
+
+.modelo-carro3{
+    color: black;
+    font-size: 50px;
+}
+
+.sub-titulo3{
+    color: black;
+}
+
+/* Estilos gerais para o formulário de contato */
+.form-container {
+    display: none; /* Esconde o formulário por padrão */
+    position: fixed; /* Posiciona o formulário de forma fixa na tela */
+    top: 0; /* Posiciona no topo da tela */
+    left: 0; /* Posiciona no lado esquerdo da tela */
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente preto */
+   /* display: flex; /* Usa flexbox para centralizar o formulário */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 1000; /* Garante que o formulário fique acima de outros elementos */
+}
+
+form {
+    background: #fff; /* Fundo branco para o formulário */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    width: 90%; /* Largura do formulário em relação à tela 90*/
+    max-width: 500px; /* Largura máxima */
+   /* Ajuste para centralizar o formulario */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button {
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    font-size: 24px; /* Tamanho da fonte grande */
+    position: absolute; /* Posicionamento absoluto */
+    top: 10px; /* Espaçamento do topo */
+    right: 10px; /* Espaçamento da direita */
+    cursor: pointer; /* Cursor de ponteiro para indicar clicável */
+}
+
+label {
+    display: block; /* Faz com que o label ocupe toda a largura disponível */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+input, textarea {
+    width: 100%; /* Ocupa toda a largura do container pai */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 5px; /* Espaçamento superior */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+button[type="submit"] {
+    padding: 10px 20px; /* Espaçamento interno */
+    background: #007BFF; /* Fundo azul */
+    color: #fff; /* Cor do texto branca */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro para indicar clicável */
+    width: 100%; /* Largura total */
+}
+
+button[type="submit"]:hover {
+    background: #0056b3; /* Fundo azul escuro ao passar o mouse */
+}
